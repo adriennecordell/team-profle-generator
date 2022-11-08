@@ -17,14 +17,15 @@ async function main() {
     try{
         for(let i = 0; i < employeeArray.length; i++) {
             employeeString = employeeString + 
-            `<div class"card" style="width: 18rem;">
-                <div class="card-body"><h5 class="card-title> ${employeeArray[i].role}</h5>
+            `<div class="card" style="width: 18rem;">
+               <div class="card-body">
+                <h5 class="card-title"> ${employeeArray[i].role}</h5>
                 <h5 class="card-title">${employeeArray[i].name}</h5>
-                <h6 class="card-subtitle mb-2 text-muted'"> ${employeeArray[i].id}</h6>
-                <p class="card-text">${employeeArray[i].email}.</p>`
+                <h6 class="card-subtitle mb-2 text-muted"> ${employeeArray[i].id}</h6>
+                <p class="card-text">${employeeArray[i].email}</p>`
           if (employeeArray[i].role === "Manager") {
             employeeString += `<p class="card-link"> ${employeeArray[i].officeNumber}</p>
-                </div>
+              </div>
             </div>`
           }
           else if (employeeArray[i].role ==="Engineer") {
@@ -34,7 +35,7 @@ async function main() {
             </div>`
           } else {
             employeeString += 
-            `<p class="card-link>${employeeArray[i].school}</p>
+            `<p class="card-link">${employeeArray[i].school}</p>
                 </div>
             </div>`
           }
@@ -107,7 +108,7 @@ async function prompt() {
     ]).then(response => {
         switch(response.role) {
             case "Engineer":
-                const engineer = new Engineer(response.name, response,id, response.email, response.github);
+                const engineer = new Engineer(response.name, response.id, response.email, response.github);
                 employeeArray.push(engineer);
                 addEmployee();
                 break;
