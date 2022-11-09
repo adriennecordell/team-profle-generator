@@ -22,7 +22,9 @@ async function main() {
                 <h5 class="card-title"> ${employeeArray[i].role}</h5>
                 <h5 class="card-title">${employeeArray[i].name}</h5>
                 <h6 class="card-subtitle mb-2 text-muted"> ${employeeArray[i].id}</h6>
-                <p class="card-text">${employeeArray[i].email}</p>`
+                <p class="card-text">
+                 <a href="mailto:${employeeArray[i].email}">Send Email</a>
+                </p>`
           if (employeeArray[i].role === "Manager") {
             employeeString += `<p class="card-link"> ${employeeArray[i].officeNumber}</p>
               </div>
