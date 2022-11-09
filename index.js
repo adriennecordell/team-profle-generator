@@ -8,7 +8,6 @@ const Intern = require ('./lib/Intern');
 const generateHTML =require('./src/index-html')
 
 const writeFileAsync = util.promisify(fs.writeFile);
-//const appendFileAsync = util.promisify(fs.appendFile);
 
 let employeeArray = [];
 let employeeString = ``;
@@ -23,7 +22,7 @@ async function main() {
                 <h5 class="card-title">${employeeArray[i].name}</h5>
                 <h6 class="card-subtitle mb-2 text-muted"> ${employeeArray[i].id}</h6>
                 <p class="card-text">
-                 <a href="mailto:${employeeArray[i].email}">Send Email</a>
+                 <a href="mailto:${employeeArray[i].email}">${employeeArray[i].email} </a>
                 </p>`
           if (employeeArray[i].role === "Manager") {
             employeeString += `<p class="card-link"> ${employeeArray[i].officeNumber}</p>
@@ -32,7 +31,9 @@ async function main() {
           }
           else if (employeeArray[i].role ==="Engineer") {
             employeeString += 
-            `<p class="card-link">${employeeArray[i].github}</p>
+            `<p class="card-text">
+                <a href="https://github.com/${employeeArray[i].github}">${employeeArray[i].github}</a>
+             </p>
                 </div>
             </div>`
           } else {
@@ -53,7 +54,6 @@ async function main() {
 };
 
 async function prompt() {
-    //let responseDone = "";
 
     try{
         inquirer
