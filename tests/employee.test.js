@@ -14,13 +14,13 @@ test ('Set employee name', () => {
 
 test ('Set employee ID', () => {
     const testId = 13
-    const employee = new Employee("Josh", id);
+    const employee = new Employee("Josh", testId);
     expect(employee.id).toBe(testId)
 });
 
 test ('Set employee email', () => {
     const testEmail = "josh@yahoo.com"
-    const employee = new Employee("Josh", 1, email)
+    const employee = new Employee("Josh", 1, testEmail)
     expect(employee.email).toBe(testEmail)
 });
 
@@ -36,9 +36,9 @@ test ('Get employee ID', () => {
     expect(employee.getId()).toBe(testId);
 });
 
-test ('Get employee Email', () => {
+test ('Get employee email', () => {
     const testEmail = "josh@yahoo.com"
-    const employee = new employee("josh", 1, testEmail);
+    const employee = new Employee("josh", 1, testEmail);
     expect(employee.getEmail()).toBe(testEmail);
 });
 
