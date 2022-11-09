@@ -32,7 +32,7 @@ async function main() {
           else if (employeeArray[i].role ==="Engineer") {
             employeeString += 
             `<p class="card-text">
-                <a href="https://github.com/${employeeArray[i].github}">${employeeArray[i].github}</a>
+                <a href="https://github.com/${employeeArray[i].github}">${employeeArray[i].github} On Github </a>
              </p>
                 </div>
             </div>`
