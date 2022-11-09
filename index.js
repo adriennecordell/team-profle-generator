@@ -8,7 +8,7 @@ const Intern = require ('./lib/Intern');
 const generateHTML =require('./src/index-html')
 
 const writeFileAsync = util.promisify(fs.writeFile);
-const appendFileAsync = util.promisify(fs.appendFile);
+//const appendFileAsync = util.promisify(fs.appendFile);
 
 let employeeArray = [];
 let employeeString = ``;
@@ -31,7 +31,7 @@ async function main() {
           else if (employeeArray[i].role ==="Engineer") {
             employeeString += 
             `<p class="card-link">${employeeArray[i].github}</p>
-                </div.
+                </div>
             </div>`
           } else {
             employeeString += 
@@ -51,7 +51,7 @@ async function main() {
 };
 
 async function prompt() {
-    let responseDone = "";
+    //let responseDone = "";
 
     try{
         inquirer
