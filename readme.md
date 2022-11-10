@@ -11,6 +11,16 @@
 
 To install my project, clone my repo to your local computer. Once cloned you will need to download inquirer and jest. To do so open a terminal from the project folder and run 'npm i inquirer@8.2.4' and then 'npm install --save-dev jest'
 
+![first](https://user-images.githubusercontent.com/110563204/201003662-8d4d66f9-5143-4688-84bc-437a5fe2bd07.mov)
+![second](https://user-images.githubusercontent.com/110563204/201003749-ec49855f-88d7-4bb5-b69c-70bb12dc0eea.mov)
+![third](https://user-images.githubusercontent.com/110563204/201003782-d53b9dc9-0c8e-43f1-8d3d-56edb4114970.mov)
+![forth](https://user-images.githubusercontent.com/110563204/201003813-0644d772-9168-45e5-a190-a0c65cf4b2a4.mov)
+
+
+
+
+
+
 
 ## Usage
 
